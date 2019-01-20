@@ -116,59 +116,120 @@ valid keeps label stable after removing focus
     margin-left: 65px;
     top: 15px;
 }
+
 /* ----------------------------- End of Switch ------------------------------ */
 
 /* ----------------------------- Checkbox ------------------------------ */
-.mdc-checkbox__label{
+.mdc-checkbox__label {
     position: relative;
     cursor: pointer;
     padding-left: 35px;
     margin-bottom: 12px;
 }
+
 /* Hide the browser's default checkbox */
-.mdc-checkbox__native-control{
+.mdc-checkbox__native-control {
     position: absolute;
     opacity: 0;
 }
+
 /* Create custom checkbox */
-.checkmark{
+.checkmark {
     position: absolute;
     width: 24px;
     height: 24px;
     border: 2px solid gray;
 }
+
 /* On mouse-over, add a grey background color */
-.mdc-checkbox__label:hover .mdc-checkbox__native-control ~ .checkmark {
+.mdc-checkbox__label:hover .mdc-checkbox__native-control~.checkmark {
     background-color: #F8F8F8;
     transition: .2s;
-  }
-  /* When the checkbox is checked, add a green background */
-.mdc-checkbox__label .mdc-checkbox__native-control:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a green background */
+.mdc-checkbox__label .mdc-checkbox__native-control:checked~.checkmark {
     background-color: mediumseagreen;
-  }
-  /* Create the checkmark/indicator (hidden when not checked) */
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-    position: absolute; 
-    display: none; 
-    content: "\2714"; /* CSS CODE: 2714 */
-    color: white; /* css code */
-    font-size: 24px; /* css code */
-    margin-left: 2px; /* css code */
+    position: absolute;
+    display: none;
+    content: "\2714";
+    /* CSS CODE: 2714 */
+    color: white;
+    /* css code */
+    font-size: 24px;
+    /* css code */
+    margin-left: 2px;
+    /* css code */
     margin-top: -5px;
-  }
-  /* Show the checkmark when checked */
-.mdc-checkbox__label .mdc-checkbox__native-control:checked ~ .checkmark:after {
+}
+
+/* Show the checkmark when checked */
+.mdc-checkbox__label .mdc-checkbox__native-control:checked~.checkmark:after {
     display: block;
-  }
-  .checkboxText {
+}
+
+.checkboxText {
     font-size: 16px;
     margin-left: 80px;
     margin-top: -15px;
 }
 
-
-
 /* ----------------------------- End of Checkbox ------------------------------ */
 
 /* ----------------------------- Radio button ------------------------------ */
+.mdc-radio__label {
+    position: relative;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Hide the browser's default radio button */
+.mdc-radio__native-control {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Create custom radio button */
+.checkmarkRadio {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+/* On mouse-over, add a grey background color */
+.mdc-radio__label:hover .mdc-radio__native-control~.checkmarkRadio {
+    background-color: #E8E8E8;
+    transition: .2s;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmarkRadio:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: mediumseagreen;
+    margin-left: 5.5px;
+    margin-top: 5px;
+}
+
+/* Show the radio button when checked */
+.mdc-radio__label .mdc-radio__native-control:checked~.checkmarkRadio:after {
+    display: block;
+}
+
+.radioText {
+    font-size: 16px;
+    margin-left: 40px;
+    margin-top: -15px;
+}
 /* ----------------------------- End of Radio button ------------------------------ */
