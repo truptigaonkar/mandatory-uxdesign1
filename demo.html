@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <div class="parent">
+        <h1 style="text-align:center;">Sign In</h1>
     <!-- Textfield -->
     <div class="mdc-text-field">
         <input type="text" class="mdc-text-field__input" required="">
@@ -26,7 +28,7 @@
     <div class="mdc-switch">
         <input type="checkbox" id="basic-switch" class="mdc-switch__native-control hidden" />
         <label for="basic-switch" class="mdc-switch__label">
-            <p class="labelText">off/on</p>
+            <p class="labelText">Offline/Online</p>
         </label>
     </div><br><br>
 
@@ -40,7 +42,7 @@
     </div>
     <div class="mdc-checkbox">
         <label class="mdc-checkbox__label">
-            <input type="checkbox" checked="checked" class="mdc-checkbox__native-control">
+            <input type="checkbox" class="mdc-checkbox__native-control">
             <span class="checkmark"></span>
             <p class="checkboxText">Keep me logged in!</p>
         </label>
@@ -51,23 +53,17 @@
         <label class="mdc-radio__label">
             <input type="radio" checked="checked" name="radio" class="mdc-radio__native-control">
             <span class="checkmarkRadio"></span>
-            <p class="radioText">Yes</p>
+            <p class="radioText">Male</p>
         </label>
     </div>
     <div class="mdc-radio">
         <label class="mdc-radio__label">
             <input type="radio" name="radio" class="mdc-radio__native-control">
             <span class="checkmarkRadio"></span>
-            <p class="radioText">No</p>
+            <p class="radioText">Female</p>
         </label>
     </div>
-    <div class="mdc-radio">
-        <label class="mdc-radio__label">
-            <input type="radio" name="radio" class="mdc-radio__native-control">
-            <span class="checkmarkRadio"></span>
-            <p class="radioText">Decide later</p>
-        </label>
-    </div>
+</div>
     <script src="mds.js"></script>
 </body>
 

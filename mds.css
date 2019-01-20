@@ -1,8 +1,17 @@
 body {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #87cefa;
+}
+.parent{
+    padding: 30px;
+    border-style: inset;
+    border-color: coral;
+    border-width: 7px;
+    background-color: #fff;
 }
 
 /* ----------------------------- Textfield ------------------------------ */
@@ -11,10 +20,9 @@ body {
     height: 56px;
     padding-left: 12px;
     background-color: #F8F8F8;
-    font-size: 14px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    b box-sizing: border-box;
+    box-sizing: border-box;
     box-shadow: none;
     outline: none;
     border: none;
@@ -30,7 +38,6 @@ body {
     position: absolute;
     bottom: 20px;
     left: 12px;
-    font-size: 16px;
     /* transition: o.5s; */
     transition: top .5s ease-in 0s;
     color: #9E9E9E;
@@ -45,14 +52,14 @@ valid keeps label stable after removing focus
 .mdc-text-field__input:valid~label {
     top: 5px;
     left: 12px;
-    color: #3F51B5;
+    color: #3700b3;
     font-size: 12px;
     font-weight: bold;
 }
 
 .mdc-text-field__input:focus,
 .mdc-text-field__input:valid {
-    border-bottom: 2px solid #3F51B5;
+    border-bottom: 2px solid #3700b3;
     background-color: #E8E8E8;
 }
 
@@ -90,31 +97,22 @@ valid keeps label stable after removing focus
 }
 
 .mdc-switch__native-control:checked~label {
-    background: #6fbeb5;
+    background: #997DD8;
 }
 
 .mdc-switch__native-control:checked~label:after {
     left: 20px;
-    background: #179588;
+    background: #3700b3;
 }
 
-.mdc-switch__native-control:disabled~label {
-    background: #d5d5d5;
-    pointer-events: none;
-}
-
-.mdc-switch__native-control:disabled~label:after {
-    background: #bcbdbc;
-}
-
+/* Hide the browser's default switch */
 .hidden {
     display: none;
 }
 
 .labelText {
-    font-size: 16px;
-    margin-left: 65px;
-    top: 15px;
+    margin-left: 45px;
+    margin-top: 25px;
 }
 
 /* ----------------------------- End of Switch ------------------------------ */
@@ -123,8 +121,7 @@ valid keeps label stable after removing focus
 .mdc-checkbox__label {
     position: relative;
     cursor: pointer;
-    padding-left: 35px;
-    margin-bottom: 12px;
+    padding-left: 5px;  
 }
 
 /* Hide the browser's default checkbox */
@@ -136,9 +133,9 @@ valid keeps label stable after removing focus
 /* Create custom checkbox */
 .checkmark {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    border: 2px solid gray;
+    width: 21px;
+    height: 21px;
+    border: 3px solid gray;
 }
 
 /* On mouse-over, add a grey background color */
@@ -149,22 +146,20 @@ valid keeps label stable after removing focus
 
 /* When the checkbox is checked, add a green background */
 .mdc-checkbox__label .mdc-checkbox__native-control:checked~.checkmark {
-    background-color: mediumseagreen;
+    background-color: #3700b3;
+    border: 3px solid #3700b3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     position: absolute;
     display: none;
-    content: "\2714";
-    /* CSS CODE: 2714 */
+    content: "\2714"; /* CSS CODE: 2714 */
     color: white;
-    /* css code */
-    font-size: 24px;
-    /* css code */
-    margin-left: 2px;
-    /* css code */
-    margin-top: -5px;
+    font-size: 24px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Show the checkmark when checked */
@@ -173,8 +168,7 @@ valid keeps label stable after removing focus
 }
 
 .checkboxText {
-    font-size: 16px;
-    margin-left: 80px;
+    margin-left: 45px;
     margin-top: -15px;
 }
 
@@ -196,10 +190,10 @@ valid keeps label stable after removing focus
 /* Create custom radio button */
 .checkmarkRadio {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
-    border: 2px solid gray;
+    border: 3px solid #3700b3;
 }
 
 /* On mouse-over, add a grey background color */
@@ -213,13 +207,15 @@ valid keeps label stable after removing focus
     content: "";
     position: absolute;
     display: none;
-
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: mediumseagreen;
-    margin-left: 5.5px;
-    margin-top: 5px;
+    background-color:#3700b3;
+    text-align: center;
+    /* keeping inner cirle at the center of bigger circle */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Show the radio button when checked */
@@ -228,8 +224,7 @@ valid keeps label stable after removing focus
 }
 
 .radioText {
-    font-size: 16px;
-    margin-left: 40px;
+    margin-left: 45px;
     margin-top: -15px;
 }
 /* ----------------------------- End of Radio button ------------------------------ */
