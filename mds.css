@@ -64,7 +64,7 @@ valid keeps label stable after removing focus
     display: block;
     height: 14px;
     width: 36px;
-    background: #898989;
+    background: #D0D0D0;
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -73,7 +73,7 @@ valid keeps label stable after removing focus
 .mdc-switch__label:after {
     position: absolute;
     left: -2px;
-    bottom: -3px;
+    bottom: -2px;
     display: block;
     width: 20px;
     height: 20px;
@@ -116,10 +116,58 @@ valid keeps label stable after removing focus
     margin-left: 65px;
     top: 15px;
 }
-
 /* ----------------------------- End of Switch ------------------------------ */
 
 /* ----------------------------- Checkbox ------------------------------ */
+.mdc-checkbox__label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-bottom: 12px;
+}
+/* Hide the browser's default checkbox */
+.mdc-checkbox__native-control{
+    position: absolute;
+    opacity: 0;
+}
+/* Create custom checkbox */
+.checkmark{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 2px solid gray;
+}
+/* On mouse-over, add a grey background color */
+.mdc-checkbox__label:hover .mdc-checkbox__native-control ~ .checkmark {
+    background-color: #F8F8F8;
+    transition: .2s;
+  }
+  /* When the checkbox is checked, add a green background */
+.mdc-checkbox__label .mdc-checkbox__native-control:checked ~ .checkmark {
+    background-color: mediumseagreen;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    position: absolute; 
+    display: none; 
+    content: "\2714"; /* CSS CODE: 2714 */
+    color: white; /* css code */
+    font-size: 24px; /* css code */
+    margin-left: 2px; /* css code */
+    margin-top: -5px;
+  }
+  /* Show the checkmark when checked */
+.mdc-checkbox__label .mdc-checkbox__native-control:checked ~ .checkmark:after {
+    display: block;
+  }
+  .checkboxText {
+    font-size: 16px;
+    margin-left: 80px;
+    margin-top: -15px;
+}
+
+
+
 /* ----------------------------- End of Checkbox ------------------------------ */
 
 /* ----------------------------- Radio button ------------------------------ */
