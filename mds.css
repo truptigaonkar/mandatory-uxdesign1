@@ -13,9 +13,17 @@ body {
     border-width: 7px;
     background-color: #fff;
 }
+fieldset{
+    padding: 10px;
+    border-style: inset;
+    border-color: coral;
+    border-width: 2px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
 /* ----------------------------- Textfield ------------------------------ */
-.mdc-text-field__input {
+.mds-text-field__input {
     width: 280px;
     height: 56px;
     padding-left: 12px;
@@ -29,12 +37,12 @@ body {
     border-bottom: 2px solid #999;
 }
 
-.mdc-text-field {
+.mds-text-field {
     position: relative;
     margin-top: 20px;
 }
 
-.mdc-floating-label {
+.mds-floating-label {
     position: absolute;
     bottom: 20px;
     left: 12px;
@@ -48,8 +56,8 @@ body {
 focus allows to change label's position
 valid keeps label stable after removing focus
 */
-.mdc-text-field__input:focus~label,
-.mdc-text-field__input:valid~label {
+.mds-text-field__input:focus~label,
+.mds-text-field__input:valid~label {
     top: 5px;
     left: 12px;
     color: #3700b3;
@@ -57,8 +65,8 @@ valid keeps label stable after removing focus
     font-weight: bold;
 }
 
-.mdc-text-field__input:focus,
-.mdc-text-field__input:valid {
+.mds-text-field__input:focus,
+.mds-text-field__input:valid {
     border-bottom: 2px solid #3700b3;
     background-color: #E8E8E8;
 }
@@ -66,7 +74,7 @@ valid keeps label stable after removing focus
 /* ----------------------------- End of Textfield ------------------------------ */
 
 /* ----------------------------- Switch ------------------------------ */
-.mdc-switch__label {
+.mds-switch__label {
     position: relative;
     display: block;
     height: 14px;
@@ -77,7 +85,7 @@ valid keeps label stable after removing focus
     transition: all 0.3s ease;
 }
 
-.mdc-switch__label:after {
+.mds-switch__label:after {
     position: absolute;
     left: -2px;
     bottom: -2px;
@@ -91,16 +99,16 @@ valid keeps label stable after removing focus
     transition: all 0.3s ease;
 }
 
-.mdc-switch__label:active:after {
+.mds-switch__label:active:after {
     transform: scale(1.15, 0.85);
     /* box-shadow: 0px 0px 0px 36px #F8F8F8; */
 }
 
-.mdc-switch__native-control:checked~label {
+.mds-switch__native-control:checked~label {
     background: #997DD8;
 }
 
-.mdc-switch__native-control:checked~label:after {
+.mds-switch__native-control:checked~label:after {
     left: 20px;
     background: #3700b3;
 }
@@ -112,20 +120,20 @@ valid keeps label stable after removing focus
 
 .labelText {
     margin-left: 45px;
-    margin-top: 25px;
+    width: 100%;
 }
 
 /* ----------------------------- End of Switch ------------------------------ */
 
 /* ----------------------------- Checkbox ------------------------------ */
-.mdc-checkbox__label {
+.mds-checkbox__label {
     position: relative;
     cursor: pointer;
     padding-left: 5px;  
 }
 
 /* Hide the browser's default checkbox */
-.mdc-checkbox__native-control {
+.mds-checkbox__native-control {
     position: absolute;
     opacity: 0;
 }
@@ -139,13 +147,13 @@ valid keeps label stable after removing focus
 }
 
 /* On mouse-over, add a grey background color */
-.mdc-checkbox__label:hover .mdc-checkbox__native-control~.checkmark {
+.mds-checkbox__label:hover .mds-checkbox__native-control~.checkmark {
     background-color: #F8F8F8;
     transition: .2s;
 }
 
 /* When the checkbox is checked, add a green background */
-.mdc-checkbox__label .mdc-checkbox__native-control:checked~.checkmark {
+.mds-checkbox__label .mds-checkbox__native-control:checked~.checkmark {
     background-color: #3700b3;
     border: 3px solid #3700b3;
 }
@@ -163,7 +171,7 @@ valid keeps label stable after removing focus
 }
 
 /* Show the checkmark when checked */
-.mdc-checkbox__label .mdc-checkbox__native-control:checked~.checkmark:after {
+.mds-checkbox__label .mds-checkbox__native-control:checked~.checkmark:after {
     display: block;
 }
 
@@ -175,14 +183,14 @@ valid keeps label stable after removing focus
 /* ----------------------------- End of Checkbox ------------------------------ */
 
 /* ----------------------------- Radio button ------------------------------ */
-.mdc-radio__label {
+.mds-radio__label {
     position: relative;
     cursor: pointer;
     margin-left: 5px;
 }
 
 /* Hide the browser's default radio button */
-.mdc-radio__native-control {
+.mds-radio__native-control {
     position: absolute;
     opacity: 0;
 }
@@ -197,7 +205,7 @@ valid keeps label stable after removing focus
 }
 
 /* On mouse-over, add a grey background color */
-.mdc-radio__label:hover .mdc-radio__native-control~.checkmarkRadio {
+.mds-radio__label:hover .mds-radio__native-control~.checkmarkRadio {
     background-color: #E8E8E8;
     transition: .2s;
 }
@@ -211,7 +219,6 @@ valid keeps label stable after removing focus
     height: 10px;
     border-radius: 50%;
     background-color:#3700b3;
-    text-align: center;
     /* keeping inner cirle at the center of bigger circle */
     top: 50%;
     left: 50%;
@@ -219,7 +226,7 @@ valid keeps label stable after removing focus
 }
 
 /* Show the radio button when checked */
-.mdc-radio__label .mdc-radio__native-control:checked~.checkmarkRadio:after {
+.mds-radio__label .mds-radio__native-control:checked~.checkmarkRadio:after {
     display: block;
 }
 
@@ -227,4 +234,11 @@ valid keeps label stable after removing focus
     margin-left: 45px;
     margin-top: -15px;
 }
+/* .mds-radio__disabled{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    
+} */
+
 /* ----------------------------- End of Radio button ------------------------------ */
