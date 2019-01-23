@@ -34,7 +34,6 @@ fieldset{
     box-shadow: none;
     outline: none;
     border: none;
-    border-bottom: 2px solid #999;
 }
 
 .mds-text-field {
@@ -46,27 +45,21 @@ fieldset{
     position: absolute;
     bottom: 20px;
     left: 12px;
-    /* transition: o.5s; */
-    transition: top .5s ease-in 0s;
+    transition: all 150ms ease-out;
     color: #9E9E9E;
     pointer-events: none;
 }
-
-/*  
-focus allows to change label's position
-valid keeps label stable after removing focus
-*/
-.mds-text-field__input:focus~label,
-.mds-text-field__input:valid~label {
+.is-active{
     top: 5px;
     left: 12px;
     color: #3700b3;
     font-size: 12px;
     font-weight: bold;
+} 
+.underline{
+    border-bottom: 2px solid #999;
 }
-
-.mds-text-field__input:focus,
-.mds-text-field__input:valid {
+.underline-is-active{
     border-bottom: 2px solid #3700b3;
     background-color: #E8E8E8;
 }

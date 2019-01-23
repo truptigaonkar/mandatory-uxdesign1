@@ -1,18 +1,31 @@
-
 window.mds = {
-    textField: function (element) {
-
-    },
-    switch: function (element) {
-
-    },
-    checkbox: function (element) {
-
-    },
-    radioButton: function (element) {
-
-    },
+    textField: textField(),
+    switch: empty,
+    checkbox: empty,
+    radioButton: empty
 };
+
+// Control behavior of the textField label and underline
+function textField() {
+    let inputTextfield = document.querySelector('.mds-text-field__input');
+    console.log(inputTextfield);
+    let labelTextfield = document.querySelector('.mds-floating-label');
+    let underline = document.querySelector('.underline');
+
+    inputTextfield.addEventListener('focus', () => {
+        labelTextfield.classList.add('is-active');
+        underline.classList.add('underline-is-active');
+    });
+    inputTextfield.addEventListener('blur', () => {
+        if (inputTextfield.value == '') {
+            labelTextfield.classList.remove('is-active');
+            underline.classList.remove('underline-is-active');
+        }
+    });
+}
+function empty() {}
+
+
 
 // Jquery to give disable effect to each element
 $(function () {
@@ -24,10 +37,10 @@ $(function () {
     // Disable Switch
     $("#disableSwitch1").attr("disabled", true);
     $("#mds-switch__checkedDisabled").css('opacity', '0.4');
-    
+
     $("#disableSwitch2").attr("disabled", true);
     $("#mds-switch__uncheckedDisabled").css('opacity', '0.4');
-   
+
 
     // Disable Checkbox
     $("#disableCheckbox1").attr("disabled", true);
@@ -36,7 +49,7 @@ $(function () {
     $("#disableCheckbox2").attr("disabled", true);
     $("#mds-checkbox__uncheckedDisabled").css('opacity', '0.4');
 
-    
+
     // Disable Radio Button
     $("#disableRadio1").attr("disabled", true);
     $("#mds-radio__checkedDisabled").css('opacity', '0.4');
@@ -44,9 +57,3 @@ $(function () {
     $("#disableRadio2").attr("disabled", true);
     $("#mds-radio__uncheckedDisabled").css('opacity', '0.4');
 });
-
-
-
-
-
-
