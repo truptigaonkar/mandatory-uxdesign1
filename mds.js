@@ -8,19 +8,25 @@ window.mds = {
 // Control behavior of the textField label and underline
 function textField() {
     let inputTextfield = document.querySelector('.mds-text-field__input');
-    console.log(inputTextfield);
     let labelTextfield = document.querySelector('.mds-floating-label');
     let underline = document.querySelector('.underline');
 
     inputTextfield.addEventListener('focus', () => {
-        labelTextfield.classList.add('is-active');
+        labelTextfield.classList.remove('is-active-color');
+        if(inputTextfield){
+            labelTextfield.classList.add('is-active');
+            inputTextfield.classList.add('is-active-input');
+        } 
         underline.classList.add('underline-is-active');
     });
     inputTextfield.addEventListener('blur', () => {
-        if (inputTextfield.value == '') {
-            labelTextfield.classList.remove('is-active');
-            underline.classList.remove('underline-is-active');
-        }
+        labelTextfield.classList.add('is-active-color'); 
+        if (inputTextfield.value === '') {
+            labelTextfield.classList.remove('is-active'); 
+             
+        } 
+        inputTextfield.classList.remove('is-active-input'); 
+        underline.classList.remove('underline-is-active');
     });
 }
 function empty() {}

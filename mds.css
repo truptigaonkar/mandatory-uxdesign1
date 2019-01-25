@@ -6,14 +6,16 @@ body {
     font-size: 16px;
     background-color: #87cefa;
 }
-.parent{
+
+.parent {
     padding: 30px;
     border-style: inset;
     border-color: coral;
     border-width: 7px;
     background-color: #fff;
 }
-fieldset{
+
+fieldset {
     padding: 10px;
     border-style: inset;
     border-color: coral;
@@ -27,7 +29,7 @@ fieldset{
     width: 280px;
     height: 56px;
     padding-left: 12px;
-    background-color: #F8F8F8;
+    background-color: #ebe5f7;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     box-sizing: border-box;
@@ -49,17 +51,37 @@ fieldset{
     color: #9E9E9E;
     pointer-events: none;
 }
-.is-active{
+/* label animation */
+.is-active {
     top: 5px;
     left: 12px;
     color: #3700b3;
     font-size: 12px;
     font-weight: bold;
-} 
-.underline{
+}
+/* Input box color change after focus */
+.is-active-input {
+    width: 280px;
+    height: 56px;
+    padding-left: 12px;
+    background-color: #d7ccef;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+/* label color change after focus */
+.is-active-color {
+    color: #757575;
+}
+/* input box underline before focus */
+.underline {
     border-bottom: 2px solid #999;
 }
-.underline-is-active{
+/* input box underline after focus */
+.underline-is-active {
     border-bottom: 2px solid #3700b3;
     background-color: #E8E8E8;
 }
@@ -122,7 +144,7 @@ fieldset{
 .mds-checkbox__label {
     position: relative;
     cursor: pointer;
-    padding-left: 5px;  
+    padding-left: 5px;
 }
 
 /* Hide the browser's default checkbox */
@@ -139,13 +161,13 @@ fieldset{
     border: 3px solid gray;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add background color */
 .mds-checkbox__label:hover .mds-checkbox__native-control~.checkmark {
     background-color: #F8F8F8;
     transition: .2s;
 }
 
-/* When the checkbox is checked, add a green background */
+/* When the checkbox is checked, add background and text color */
 .mds-checkbox__label .mds-checkbox__native-control:checked~.checkmark {
     background-color: #3700b3;
     border: 3px solid #3700b3;
@@ -155,12 +177,17 @@ fieldset{
 .checkmark:after {
     position: absolute;
     display: none;
-    content: "\2714"; /* CSS CODE: 2714 */
-    color: white;
-    font-size: 24px; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    content: "";
+
+    left: 5px;
+    top: 0px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 /* Show the checkmark when checked */
@@ -197,7 +224,7 @@ fieldset{
     border: 3px solid #3700b3;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add background color */
 .mds-radio__label:hover .mds-radio__native-control~.checkmarkRadio {
     background-color: #E8E8E8;
     transition: .2s;
@@ -211,7 +238,7 @@ fieldset{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color:#3700b3;
+    background-color: #3700b3;
     /* keeping inner cirle at the center of bigger circle */
     top: 50%;
     left: 50%;
@@ -227,11 +254,4 @@ fieldset{
     margin-left: 45px;
     margin-top: -15px;
 }
-/* .mds-radio__disabled{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    
-} */
-
 /* ----------------------------- End of Radio button ------------------------------ */
