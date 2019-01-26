@@ -78,6 +78,7 @@ fieldset {
 }
 /* input box underline before focus */
 .underline {
+    width: 280px;
     border-bottom: 2px solid #999;
 }
 /* input box underline after focus */
