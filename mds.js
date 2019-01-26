@@ -31,8 +31,6 @@ function textField() {
 }
 function empty() {}
 
-
-
 // Jquery to give disable effect to each element
 $(function () {
     // Disable textfield
