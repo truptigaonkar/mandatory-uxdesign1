@@ -12,17 +12,17 @@ function textField() {
     let underline = document.querySelector('.mds-text-field__underline');
 
     inputTextfield.addEventListener('focus', () => {
-        labelTextfield.classList.remove('mds-text-field__label--focussed');
+        labelTextfield.classList.remove('mds-text-field__label--focussedColor');
         if(inputTextfield){
-            labelTextfield.classList.add('mds-text-field__label--focussedanimation');
+            labelTextfield.classList.add('mds-text-field__label--focussed');
             inputTextfield.classList.add('mds-text-field__input--focussed');
         } 
         underline.classList.add('mds-text-field__underline--focussed');
     });
     inputTextfield.addEventListener('blur', () => {
-        labelTextfield.classList.add('mds-text-field__label--focussed'); 
+        labelTextfield.classList.add('mds-text-field__label--focussedColor'); 
         if (inputTextfield.value === '') {
-            labelTextfield.classList.remove('mds-text-field__label--focussedanimation'); 
+            labelTextfield.classList.remove('mds-text-field__label--focussed'); 
              
         } 
         inputTextfield.classList.remove('mds-text-field__input--focussed'); 

@@ -37,6 +37,7 @@ fieldset {
     outline: none;
     border: none;
 }
+
 .mds-text-field {
     position: relative;
     margin-top: 20px;
@@ -51,7 +52,7 @@ fieldset {
     pointer-events: none;
 }
 /* label animation */
-.mds-text-field__label--focussedanimation {
+.mds-text-field__label--focussed {
     top: 5px;
     left: 12px;
     color: #3700b3;
@@ -61,7 +62,7 @@ fieldset {
 /* Input box color change after focus */
 .mds-text-field__input--focussed {
     width: 280px;
-    height: 56px;
+    height: 56px;mds-text-field__label--focussedColor
     padding-left: 12px;
     background-color: #d7ccef;
     border-top-left-radius: 5px;
@@ -72,7 +73,7 @@ fieldset {
     border: none;
 }
 /* label color change after focus */
-.mds-text-field__label--focussed {
+.{
     color: #757575;
 }
 /* input box underline before focus */
