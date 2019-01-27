@@ -15,19 +15,19 @@
 <body>
     <div class="parent">
         <h1 style="text-align:center; color: coral">UX-Design Elements</h1>
-        <!-- Textfield -->
         <form>
+            <!-- Textfield -->
             <fieldset>
                 <legend>Textfield</legend>
                 <div class="mds-text-field">
-                    <input class="mds-text-field__input" type="text" placeholder=" ">
-                    <div class="underline"></div>
-                    <label class="mds-floating-label">Enabled Title</label>
+                    <input class="mds-text-field__input" type="text" name="" value="">
+                    <span class="mds-text-field__underline"></span>
+                    <label class="mds-text-field__label">Enabled Title</label>
                 </div>
-                <div class="mds-text-field" id="mds-textfield__disabled">
-                    <input type="text" class="mds-text-field__input" required="" id="disableTextfield">
-                    <div class="underline"></div>
-                    <label class="mds-floating-label">Disabled Title</label>
+                <div class="mds-text-field" id="mds-text-field--disabled">
+                    <input type="text" class="mds-text-field__input" id="disableTextfield">
+                    <span class="mds-text-field__underline"></span>
+                    <label class="mds-text-field__label">Disabled Title</label>
                 </div>
             </fieldset>
 
@@ -35,21 +35,21 @@
             <fieldset>
                 <legend>Switch</legend>
                 <div class="mds-switch">
-                    <input type="checkbox" checked="checked" id="basic-switch" class="mds-switch__native-control hidden" />
+                    <input type="checkbox" checked="checked" id="basic-switch" class="mds-switch__input mds-switch__input--hidden" />
                     <label for="basic-switch" class="mds-switch__label">
-                        <p class="labelText">OFF/ON</p>
+                        <p class="mds-switch__text">OFF/ON</p>
                     </label>
                 </div>
-                <div class="mds-switch" id="mds-switch__checkedDisabled">
-                    <input type="checkbox" checked="checked" class="mds-switch__native-control hidden" id="disableSwitch1" />
+                <div class="mds-switch" id="mds-switch__checked--disabled">
+                    <input type="checkbox" checked="checked" class="mds-switch__input mds-switch__input--hidden" id="mds-switch__input--disable1" />
                     <label class="mds-switch__label">
-                        <p class="labelText">DisabledON</p>
+                        <p class="mds-switch__text">DisabledON</p>
                     </label>
                 </div>
-                <div class="mds-switch" id="mds-switch__uncheckedDisabled">
-                    <input type="checkbox" class="mds-switch__native-control hidden" id="disableSwitch2" />
+                <div class="mds-switch" id="mds-switch__unchecked--disabled">
+                    <input type="checkbox" class="mds-switch__input mds-switch__input--hidden" id="mds-switch__input--disable2" />
                     <label class="mds-switch__label">
-                        <p class="labelText">DisabledOFF</p>
+                        <p class="mds-switch__text">DisabledOFF</p>
                     </label>
                 </div>
             </fieldset>
@@ -58,30 +58,30 @@
                 <legend>Checkbox</legend>
                 <div class="mds-checkbox">
                     <label class="mds-checkbox__label">
-                        <input type="checkbox" checked="checked" class="mds-checkbox__native-control">
-                        <span class="checkmark"></span>
-                        <p class="checkboxText">Enabled Selected</p>
+                        <input type="checkbox" checked="checked" class="mds-checkbox__input">
+                        <span class="mds-checkbox__checkmark"></span>
+                        <p class="mds-checkbox__text">Enabled Selected</p>
                     </label>
                 </div>
                 <div class="mds-checkbox">
                     <label class="mds-checkbox__label">
-                        <input type="checkbox" class="mds-checkbox__native-control">
-                        <span class="checkmark"></span>
-                        <p class="checkboxText">Enabled Unselected</p>
+                        <input type="checkbox" class="mds-checkbox__input">
+                        <span class="mds-checkbox__checkmark"></span>
+                        <p class="mds-checkbox__text">Enabled Unselected</p>
                     </label>
                 </div>
                 <div class="mds-checkbox" id="mds-checkbox__checkedDisabled">
                     <label class="mds-checkbox__label">
-                        <input type="checkbox" checked="checked" class="mds-checkbox__native-control" id="disableCheckbox1">
-                        <span class="checkmark"></span>
-                        <p class="checkboxText">Disabled Selected</p>
+                        <input type="checkbox" checked="checked" class="mds-checkbox__input" id="mds-checkbox__input--disable1">
+                        <span class="mds-checkbox__checkmark"></span>
+                        <p class="mds-checkbox__text">Disabled Selected</p>
                     </label>
                 </div>
                 <div class="mds-checkbox" id="mds-checkbox__uncheckedDisabled">
                     <label class="mds-checkbox__label">
-                        <input type="checkbox" class="mds-checkbox__native-control" id="disableCheckbox2">
-                        <span class="checkmark"></span>
-                        <p class="checkboxText">Disabled UnSelected</p>
+                        <input type="checkbox" class="mds-checkbox__input" id="mds-checkbox__input--disable2">
+                        <span class="mds-checkbox__checkmark"></span>
+                        <p class="mds-checkbox__text">Disabled UnSelected</p>
                     </label>
                 </div>
             </fieldset>
@@ -90,30 +90,30 @@
                 <legend>Radio Button</legend>
                 <div class="mds-radio">
                     <label class="mds-radio__label">
-                        <input type="radio" checked="checked" name="radio" class="mds-radio__native-control">
-                        <span class="checkmarkRadio"></span>
-                        <p class="radioText">Enabled Selected</p>
+                        <input type="radio" checked="checked" name="radio" class="mds-radio__input">
+                        <span class="mds-radio__checkmark"></span>
+                        <p class="mds-radio__text">Enabled Selected</p>
                     </label>
                 </div>
                 <div class="mds-radio">
                     <label class="mds-radio__label">
-                        <input type="radio" name="radio" class="mds-radio__native-control">
-                        <span class="checkmarkRadio"></span>
-                        <p class="radioText">Enabled Unselected</p>
+                        <input type="radio" name="radio" class="mds-radio__input">
+                        <span class="mds-radio__checkmark"></span>
+                        <p class="mds-radio__text">Enabled Unselected</p>
                     </label>
                 </div>
                 <div class="mds-radio" id="mds-radio__checkedDisabled">
                     <label class="mds-radio__label">
-                        <input type="radio" checked="checked" class="mds-radio__native-control" id="disableRadio1">
-                        <span class="checkmarkRadio"></span>
-                        <p class="radioText">Disabled Selected</p>
+                        <input type="radio" checked="checked" class="mds-radio__input" id="mds-radio__input--disable1">
+                        <span class="mds-radio__checkmark"></span>
+                        <p class="mds-radio__text">Disabled Selected</p>
                     </label>
                 </div>
                 <div class="mds-radio" id="mds-radio__uncheckedDisabled">
                     <label class="mds-radio__label">
-                        <input type="radio" class="mds-radio__native-control" id="disableRadio2">
-                        <span class="checkmarkRadio"></span>
-                        <p class="radioText">Disabled Unselected</p>
+                        <input type="radio" class="mds-radio__input" id="mds-radio__input--disable2">
+                        <span class="mds-radio__checkmark"></span>
+                        <p class="mds-radio__text">Disabled Unselected</p>
                     </label>
                 </div>
             </fieldset>

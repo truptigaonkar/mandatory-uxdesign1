@@ -8,25 +8,25 @@ window.mds = {
 // Control behavior of the textField label and underline
 function textField() {
     let inputTextfield = document.querySelector('.mds-text-field__input');
-    let labelTextfield = document.querySelector('.mds-floating-label');
-    let underline = document.querySelector('.underline');
+    let labelTextfield = document.querySelector('.mds-text-field__label');
+    let underline = document.querySelector('.mds-text-field__underline');
 
     inputTextfield.addEventListener('focus', () => {
-        labelTextfield.classList.remove('is-active-color');
+        labelTextfield.classList.remove('mds-text-field__label--focussed');
         if(inputTextfield){
-            labelTextfield.classList.add('is-active');
-            inputTextfield.classList.add('is-active-input');
+            labelTextfield.classList.add('mds-text-field__label--focussedanimation');
+            inputTextfield.classList.add('mds-text-field__input--focussed');
         } 
-        underline.classList.add('underline-is-active');
+        underline.classList.add('mds-text-field__underline--focussed');
     });
     inputTextfield.addEventListener('blur', () => {
-        labelTextfield.classList.add('is-active-color'); 
+        labelTextfield.classList.add('mds-text-field__label--focussed'); 
         if (inputTextfield.value === '') {
-            labelTextfield.classList.remove('is-active'); 
+            labelTextfield.classList.remove('mds-text-field__label--focussedanimation'); 
              
         } 
-        inputTextfield.classList.remove('is-active-input'); 
-        underline.classList.remove('underline-is-active');
+        inputTextfield.classList.remove('mds-text-field__input--focussed'); 
+        underline.classList.remove('mds-text-field__underline--focussed');
     });
 }
 function empty() {}
@@ -35,29 +35,29 @@ function empty() {}
 $(function () {
     // Disable textfield
     $("#disableTextfield").attr("disabled", true);
-    $("#mds-textfield__disabled").css('opacity', '0.4');
+    $("mds-text-field--disabled").css('opacity', '0.4');
 
 
     // Disable Switch
-    $("#disableSwitch1").attr("disabled", true);
-    $("#mds-switch__checkedDisabled").css('opacity', '0.4');
+    $("#mds-switch__input--disable1").attr("disabled", true);
+    $("#mds-switch__checked--disabled").css('opacity', '0.4');
 
-    $("#disableSwitch2").attr("disabled", true);
-    $("#mds-switch__uncheckedDisabled").css('opacity', '0.4');
+    $("#mds-switch__input--disable2").attr("disabled", true);
+    $("#mds-switch__unchecked--disabled").css('opacity', '0.4');
 
 
     // Disable Checkbox
-    $("#disableCheckbox1").attr("disabled", true);
+    $("#mds-checkbox__input--disable1").attr("disabled", true);
     $("#mds-checkbox__checkedDisabled").css('opacity', '0.4');
 
-    $("#disableCheckbox2").attr("disabled", true);
+    $("#mds-checkbox__input--disable2").attr("disabled", true);
     $("#mds-checkbox__uncheckedDisabled").css('opacity', '0.4');
 
 
     // Disable Radio Button
-    $("#disableRadio1").attr("disabled", true);
+    $("#mds-radio__input--disable1").attr("disabled", true);
     $("#mds-radio__checkedDisabled").css('opacity', '0.4');
 
-    $("#disableRadio2").attr("disabled", true);
+    $("#mds-radio__input--disable2").attr("disabled", true);
     $("#mds-radio__uncheckedDisabled").css('opacity', '0.4');
 });

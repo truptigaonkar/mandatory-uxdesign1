@@ -37,13 +37,12 @@ fieldset {
     outline: none;
     border: none;
 }
-
 .mds-text-field {
     position: relative;
     margin-top: 20px;
 }
 
-.mds-floating-label {
+.mds-text-field__label {
     position: absolute;
     bottom: 20px;
     left: 12px;
@@ -52,7 +51,7 @@ fieldset {
     pointer-events: none;
 }
 /* label animation */
-.is-active {
+.mds-text-field__label--focussedanimation {
     top: 5px;
     left: 12px;
     color: #3700b3;
@@ -60,7 +59,7 @@ fieldset {
     font-weight: bold;
 }
 /* Input box color change after focus */
-.is-active-input {
+.mds-text-field__input--focussed {
     width: 280px;
     height: 56px;
     padding-left: 12px;
@@ -73,16 +72,16 @@ fieldset {
     border: none;
 }
 /* label color change after focus */
-.is-active-color {
+.mds-text-field__label--focussed {
     color: #757575;
 }
 /* input box underline before focus */
-.underline {
+.mds-text-field__underline {
     width: 280px;
     border-bottom: 2px solid #999;
 }
 /* input box underline after focus */
-.underline-is-active {
+.mds-text-field__underline--focussed {
     border-bottom: 2px solid #3700b3;
     background-color: #E8E8E8;
 }
@@ -120,21 +119,21 @@ fieldset {
     /* box-shadow: 0px 0px 0px 36px #F8F8F8; */
 }
 
-.mds-switch__native-control:checked~label {
+.mds-switch__input:checked~label {
     background: #997DD8;
 }
 
-.mds-switch__native-control:checked~label:after {
+.mds-switch__input:checked~label:after {
     left: 20px;
     background: #3700b3;
 }
 
 /* Hide the browser's default switch */
-.hidden {
+.mds-switch__input--hidden {
     display: none;
 }
 
-.labelText {
+.mds-switch__text {
     margin-left: 45px;
     width: 100%;
 }
@@ -149,13 +148,13 @@ fieldset {
 }
 
 /* Hide the browser's default checkbox */
-.mds-checkbox__native-control {
+.mds-checkbox__input {
     position: absolute;
     opacity: 0;
 }
 
 /* Create custom checkbox */
-.checkmark {
+.mds-checkbox__checkmark {
     position: absolute;
     width: 21px;
     height: 21px;
@@ -164,19 +163,19 @@ fieldset {
 }
 
 /* On mouse-over, add background color */
-.mds-checkbox__label:hover .mds-checkbox__native-control~.checkmark {
+.mds-checkbox__label:hover .mds-checkbox__input~.mds-checkbox__checkmark {
     background-color: #F8F8F8;
     transition: .2s;
 }
 
 /* When the checkbox is checked, add background and text color */
-.mds-checkbox__label .mds-checkbox__native-control:checked~.checkmark {
+.mds-checkbox__label .mds-checkbox__input:checked~.mds-checkbox__checkmark {
     background-color: #3700b3;
     border: 3px solid #3700b3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+.mds-checkbox__checkmark:after {
     position: absolute;
     display: none;
     content: "";
@@ -191,11 +190,11 @@ fieldset {
 }
 
 /* Show the checkmark when checked */
-.mds-checkbox__label .mds-checkbox__native-control:checked~.checkmark:after {
+.mds-checkbox__label .mds-checkbox__input:checked~.mds-checkbox__checkmark:after {
     display: block;
 }
 
-.checkboxText {
+.mds-checkbox__text {
     margin-left: 45px;
     margin-top: -15px;
 }
@@ -210,13 +209,13 @@ fieldset {
 }
 
 /* Hide the browser's default radio button */
-.mds-radio__native-control {
+.mds-radio__input {
     position: absolute;
     opacity: 0;
 }
 
 /* Create custom radio button */
-.checkmarkRadio {
+.mds-radio__checkmark {
     position: absolute;
     width: 16px;
     height: 16px;
@@ -225,13 +224,13 @@ fieldset {
 }
 
 /* On mouse-over, add background color */
-.mds-radio__label:hover .mds-radio__native-control~.checkmarkRadio {
+.mds-radio__label:hover .mds-radio__input~.mds-radio__checkmark {
     background-color: #E8E8E8;
     transition: .2s;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmarkRadio:after {
+.mds-radio__checkmark:after {
     content: "";
     position: absolute;
     display: none;
@@ -248,11 +247,11 @@ fieldset {
 }
 
 /* Show the radio button when checked */
-.mds-radio__label .mds-radio__native-control:checked~.checkmarkRadio:after {
+.mds-radio__label .mds-radio__input:checked~.mds-radio__checkmark:after {
     display: block;
 }
 
-.radioText {
+.mds-radio__text {
     margin-left: 45px;
     margin-top: -15px;
 }
