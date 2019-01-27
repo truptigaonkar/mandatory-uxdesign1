@@ -34,8 +34,8 @@ function empty() {}
 // Jquery to give disable effect to each element
 $(function () {
     // Disable textfield
-    $("#disableTextfield").attr("disabled", true);
-    $("mds-text-field--disabled").css('opacity', '0.4');
+    $("#mds-textfield__disabled").attr("disabled", true);
+    $("#mds-textfield__disabled").css('opacity', '0.4');
 
 
     // Disable Switch
