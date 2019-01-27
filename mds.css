@@ -73,7 +73,7 @@ fieldset {
     border: none;
 }
 /* label color change after focus */
-.{
+.mds-text-field__label--focussedColor{
     color: #757575;
 }
 /* input box underline before focus */
