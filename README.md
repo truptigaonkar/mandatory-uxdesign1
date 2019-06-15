@@ -1,27 +1,20 @@
-# Simple UI component library - UX design
+## Simple UI component library - UX design - [Live Demo]( https://truptigaonkar.github.io/mandatory-uxdesign1/)
 
-## Instructions
-
+### Instructions
 * Creating a simple UI component library, implementing four form elements from Material Design. We will be calling the library “MD Simple”.
 * The elements to be implemented are
-  * Text field
-    https://material.io/design/components/text-fields.html
-  * Switch
-    https://material.io/design/components/selection-controls.html#switches
-  * Checkboxes
-    https://material.io/design/components/selection-controls.html#checkboxes
-  * Radio buttons
-    https://material.io/design/components/selection-controls.html#radio-buttons
-
-## CSS library
+  * Text field: https://material.io/design/components/text-fields.html
+  * Switch: https://material.io/design/components/selection-controls.html#switches
+  * Checkboxes: https://material.io/design/components/selection-controls.html#checkboxes
+  * Radio buttons: https://material.io/design/components/selection-controls.html#radio-buttons
+### CSS library
 * Create a CSS file named “mds.css”. The file should define styles for the follow components using BEM.
   * .mds-text-field
   * .mds-switch
   * .mds-checkbox
   * .mds-radio
 * Please refer to the documentation for information on how to create CSS components using BEM. http://getbem.com/naming/
-
-## JavaScript Library
+### JavaScript Library
 * Create a JavaScript file named “mds.js” that defines an object called mds . The object should define the following methods
   * mds.textField(element)
   * mds.switch(element)
