@@ -1,4 +1,5 @@
 ## Simple UI component library - UX design - [Live Demo]( https://truptigaonkar.github.io/mandatory-uxdesign1/)
+![mandatory-uxdesign1](https://user-images.githubusercontent.com/14937374/79747843-af2c8c80-830c-11ea-97d0-0ca58b73c662.gif)
 
 ### Instructions
 * Creating a simple UI component library, implementing four form elements from Material Design. We will be calling the library “MD Simple”.
